@@ -1,0 +1,45 @@
+.banner {
+    background-color: #fff;
+    height: 450px;
+    margin-bottom: 40px;
+
+    .logo {
+        margin-right: 400px;
+        width: calc(500px * 1.5);
+        height: calc(206px * 1.5);
+    }
+
+    .text-view {
+        position: absolute;
+    }
+
+    .text-title {
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: 900;
+        line-height: 1.2;
+
+    }
+
+    .text-decryption {
+        text-align: center;
+        font-size: 0.8em;
+        color: #2c3e50;
+        padding: 15px 0px 35px 10px;
+    }
+
+    .button {
+        border: none;
+        background-color: #F40D30;
+        color: #fff;
+        border-radius: 5px;
+        padding: 15px 40px;
+        font-weight: bold;
+        font-size: .84em;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            background-color: #d20a28;
+        }
+    }
+}

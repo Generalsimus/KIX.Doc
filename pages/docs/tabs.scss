@@ -1,0 +1,48 @@
+.doc-menu-tabs {
+    overflow: hidden;
+    // transition: all 1 ease-in-out;
+    transition: all .15s ease-in-out;
+
+    a {
+        font-weight: 500;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &.active {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+
+        &:hover {
+            background-color: #c5c5c5;
+        }
+
+
+        svg {
+            transform: rotate(0deg);
+            transition: all .15s ease-in-out;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &.active {
+        opacity: 1 !important;
+        max-height: 4000px !important;
+    }
+
+    .doc-menu-tabs {
+        opacity: 0;
+        max-height: 1px;
+        // padding: 0;
+
+        a {
+            font-weight: 400;
+            font-size: 15px;
+            padding: 10px 20px;
+        }
+
+    }
+}

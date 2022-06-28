@@ -1,0 +1,221 @@
+$container-padding:70px;
+
+.home-page {
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.code-revision {
+    gap: 80px;
+    margin-bottom: 150px;
+    background-color: #ebebeb;
+    padding: $container-padding;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.read-simple-text {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.install-instruction {
+    $run-code-width: 400px;
+    $flex-gap: 125px;
+    gap: $flex-gap;
+    background-color: rgba(196, 196, 196, 0.44);
+    padding: $container-padding;
+    margin-bottom: 150px;
+
+    .read-simple-text {
+        width: calc(100% - #{$flex-gap} - #{$run-code-width});
+    }
+
+    .run-commands-list {
+        width: $run-code-width;
+        gap: 20px;
+
+
+    }
+
+    .learn-button {
+        background-color: rgba(244, 13, 48, 1);
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 5px;
+
+        svg {
+            margin-left: 10px;
+            $icon-scale: 1.5;
+            width: calc(16px * #{$icon-scale});
+            height: calc(16px * #{$icon-scale});
+        }
+
+    }
+}
+
+.home-page-title {
+    font-size: 2em;
+    // line-height: 1.2;
+    // margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .install-instruction {
+        $run-code-width: 400px;
+        $flex-gap: 80px;
+        gap: $flex-gap;
+
+        .read-simple-text {
+            width: calc(100% - #{$flex-gap} - #{$run-code-width});
+        }
+
+        .run-commands-list {
+            width: $run-code-width;
+            gap: 15px;
+        }
+    }
+
+
+    .code-revision {
+        gap: 40px;
+    }
+
+    .install-instruction,
+    .code-revision {
+        padding: 40px;
+    }
+
+    .home-page {
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .read-simple-text {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .home-page-title {
+        font-size: 1.8em;
+        // line-height: 1.2;
+        // margin-bottom: 50px;
+    }
+
+    .home-page {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .read-simple-text {
+        line-height: 1.5;
+    }
+
+    .install-instruction {
+        flex-direction: column;
+        gap: 20px;
+
+        .read-simple-text {
+            width: 100%;
+        }
+
+        .run-commands-list {
+            width: 100%;
+        }
+    }
+
+    .code-revision {
+        flex-direction: column-reverse;
+
+        .code-review {
+            width: 100%;
+
+            .tab-code {
+                flex-direction: row-reverse;
+
+                &>:last-child {
+                    border-right: 1px solid #ebebeb;
+                    min-width: 70%;
+                }
+
+                .code-highlighter {
+                    border-left: none;
+                }
+
+                // &>:first-child {
+                //     border-left: none;
+                // }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 810px) {
+
+    .code-revision {
+        .tab-code {
+            >* {
+                width: 100% !important;
+            }
+
+            &>:first-child {
+
+                border-top: 1px solid #ebebeb;
+                min-height: 100px;
+                justify-content: flex-start;
+            }
+
+            flex-direction: column-reverse !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .install-instruction, .code-revision {
+        padding: 25px;
+    }
+    .code-highlighter * {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+  
+    .code-highlighter * {
+        font-size: 12px !important;
+    }
+}
+@media only screen and (max-width: 500px) {
+  
+    .code-highlighter * {
+        font-size: 10px !important;
+    }
+}
+@media only screen and (max-width:  425px) {
+  
+    .code-highlighter * {
+        font-size: 9px !important;
+    }
+}
+@media only screen and (max-width:  390px) {
+  
+    .code-highlighter * {
+        font-size: 8px !important;
+    }
+}
+@media only screen and (max-width:  350px) {
+  
+    .code-highlighter * {
+        font-size: 7px !important;
+    }
+}
+@media only screen and (max-width:  310px) {
+  
+    .code-highlighter * {
+        font-size: 6px !important;
+    }
+}

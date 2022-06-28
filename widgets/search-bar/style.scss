@@ -1,0 +1,17 @@
+.search-bar {
+    svg>* {
+        stroke: #000;
+    }
+
+    input {
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+
+        // width: 300px;
+        padding: 0 10px;
+    }
+}

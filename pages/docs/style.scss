@@ -1,0 +1,27 @@
+.documentation-page {
+    // padding: 0 200px;
+    // width: 90%;
+    margin: 0px auto;
+    flex: 1;
+
+    .menu-tabs {
+        background-color: #ebebeb;
+        border-right: 1px solid #e5e5e5;
+        width: 350px;
+        padding: 15px 0px;
+    }
+
+    .menu-tab-content {
+        max-width: 50em;
+        margin: 50px auto;
+
+        .georgian-text {
+            font-family: JetBrainsMono;
+        }
+
+        .title-text {}
+
+        .description-text {}
+    }
+
+}

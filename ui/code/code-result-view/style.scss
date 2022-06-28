@@ -1,0 +1,38 @@
+.code-result-view {
+    // background-color: aliceblue;
+    box-shadow: 0 1px 1px 0 RGB(66 66 66/8%), 0 1px 3px 1px RGB(66 66 66/16%);
+    border-radius: 2px;
+    overflow: hidden;
+
+    .tab-code {
+        flex-direction: row-reverse;
+    }
+
+    .code-highlighter {
+        border: none;
+    }
+
+    .result {
+        font-size: 14px;
+        background-color: #fff;
+        // width: 40%;
+    }
+
+    .code {
+        border-right: 1px solid #ebebeb;
+    }
+
+    .tabs-list {
+        border-bottom: 1px solid #ebebeb;
+
+        >* {
+            padding: 10px;
+            cursor: pointer;
+
+            &.active {
+                background-color: #f5f5f5;
+            }
+        }
+    }
+
+}
