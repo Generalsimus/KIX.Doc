@@ -1,14 +1,13 @@
-import kix from "kix";
+// import kix from "kix";
+import kix from "kix"
 import { HomePage } from "./pages/home";
 import { Footer } from "./widgets/footer";
 import { Header } from "./widgets/header";
 import "./style.scss";
 import { DocumentationPage } from "./pages/docs";
 
-const { a } = { a: 'hello' } as const;
-const WASASASASASAAAAAAAAAA = 2
-console.log("🚀 --> file: index.tsx --> line 10 --> g", a);
-var HTML = <> 
+
+var HTML = <>
   <Header />
   <div class="route-box flex direction-column">
     <routing ifEmptyComponent={<div> Route Empty </div>}>

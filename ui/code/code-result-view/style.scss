@@ -4,6 +4,25 @@
     border-radius: 2px;
     overflow: hidden;
 
+    .code-file-names {
+        border-bottom: 1px solid #EBEBEB;
+        border-left: none;
+        border-right: none;
+        background-color: #fff;
+
+        >* {
+            font-size: 14px;
+            // margin-left: 5px;
+            line-height: 0;
+            cursor: pointer;
+            padding: 10px 5px;
+
+            &.active {
+                background-color: #efefef;
+            }
+        }
+    }
+
     .tab-code {
         flex-direction: row-reverse;
     }

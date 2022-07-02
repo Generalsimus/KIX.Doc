@@ -9,25 +9,29 @@ const emitCode1 = () => {
 }
 export const componentsDoc = <div>
     <h1 class="title-text">კომპონენტები  KIX ში</h1>
-    <br />
     <p class="description-text georgian-text ">
         კოპონენტები KIX ში განხსვავდება ჩვეულებრივ JSX ში მიღებული კომპონენტესბისგან,
         კომპონენტები ქიქსში რენდერდება ერთჯერადად და არ ხდება მათი გადარენდერება
         რაც გვაძლევს უფრო მაღალ წარმადობას
     </p>
+    {/* <br /> */}
     <CodeTabViewResult
         codes={[
             {
-                tabName: "Javascript",
-                fileName: '1.tsx',
-                code: "import kix from \"kix\"\n\nclass Hello {\n    constructor() {\n        setInterval(() => {\n            this.date = new Date()\n        }, 1000)\n    }\n    render() {\n        return <div>Date: {this.date}!</div>\n    }\n}\n\nkix(document.body, <Hello date={new Date()} />)",
-                emitCode: emitCode1
+                typeName: "JavaScript",
+                files: [{
+                    fileName: '1.tsx',
+                    code: "import kix from \"kix\"\r\n\r\nfunction ShowIndex(props) {\r\n  return <h1>INDEX: {props.index}<\/h1>\r\n}\r\n\r\nlet increment = 0\r\n\r\nsetInterval(() => {\r\n  increment++\r\n}, 1000)\r\n\r\nkix(document.body, <ShowIndex index={increment} \/>)",
+                    emitCode: emitCode1
+                }]
             },
             {
-                tabName: "Typescript",
-                fileName: '2.tsx',
-                code: "import kix, { Component } from \"kix\"\n\nclass Hello extends Component<{ date: Date }> {\n    constructor() {\n        super()\n        setInterval(() => {\n            this.date = new Date()\n        }, 1000)\n    }\n    render() {\n        return <div>Date: {this.date}!</div>\n    }\n}\n\nkix(document.body, <Hello date={new Date()} />)",
-                emitCode: emitCode1
+                typeName: "Typescript",
+                files: [{
+                    fileName: '2.tsx',
+                    code: "import kix from \"kix\"\r\n\r\ninterface Props {\r\n  index: number\r\n}\r\nfunction ShowIndex(props: Props) {\r\n  return <h1>INDEX: {props.index}<\/h1>\r\n}\r\n\r\nlet increment = 0\r\n\r\nsetInterval(() => {\r\n  increment++\r\n}, 1000)\r\n\r\nkix(document.body, <ShowIndex index={increment} \/>)",
+                    emitCode: emitCode1
+                }]
             }
         ]}
     />
@@ -38,7 +42,7 @@ export const componentsDoc = <div>
     </p>
     <CodeResultViewBox
         fileName="3.tsx"
-        code={"import kix from \"kix\"\n\nfunction Hello() {\n    const state = { date: new Date() }\n    setInterval(() => {\n        state.date = new Date()\n    }, 1000)\n    return <div>Date: {state.date}!</div>\n}\n\nkix(document.body, <Hello />)"}
+        code={"import kix from \"kix\";\r\n\r\nfunction Hello() {\r\n  let date = new Date();\r\n  setInterval(() => {\r\n    date = new Date();\r\n  }, 1000);\r\n  return <div>Date: {date}!<\/div>;\r\n}\r\n\r\nkix(document.body, <Hello \/>);"}
         emitCode={emitCode1}
     />
 </div>
