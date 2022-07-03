@@ -80,7 +80,7 @@ export const routingDoc = <div>
     </p>
     <CodeResultViewBox
         fileName="1.tsx"
-        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  return <>\r\n    <switch href=\"\/\">PADE 1<\/switch>\r\n    <switch href=\"\/page\/2\">PADE 2<\/switch>\r\n    <switch href=\"\/page\/3\">PADE 3<\/switch>\r\n\r\n    <router path=\"\/\" component={<h1>PAGE 1<\/h1>} \/>\r\n    <router path=\"\/page\/2\" component={<h1>PAGE 2<\/h1>} \/>\r\n    <router path=\"\/page\/3\" component={<h1>PAGE 3<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
+        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  return <>\r\n    <route-link href=\"\/\">PADE 1<\/route-link>\r\n    <route-link href=\"\/page\/2\">PADE 2<\/route-link>\r\n    <route-link href=\"\/page\/3\">PADE 3<\/route-link>\r\n\r\n    <route-switch path=\"\/\" component={<h1>PAGE 1<\/h1>} \/>\r\n    <route-switch path=\"\/page\/2\" component={<h1>PAGE 2<\/h1>} \/>\r\n    <route-switch path=\"\/page\/3\" component={<h1>PAGE 3<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <route-block \/>)"}
         emitCode={emitCode1}
     />
     <br />
@@ -90,17 +90,17 @@ export const routingDoc = <div>
     </p>
     <CodeResultViewBox
         fileName="1.tsx"
-        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  return <>\r\n    <switch href=\"\/\">PADE 1<\/switch>\r\n    <switch href=\"\/page\/2\">PADE 2<\/switch>\r\n    <switch href=\"\/page\/3\">PADE 3<\/switch>\r\n\r\n    <router path=\"\/\" unique={true} component={<h1>PAGE 1<\/h1>} \/>\r\n    <router path=\"\/page\/2\" component={<h1>PAGE 2<\/h1>} \/>\r\n    <router path=\"\/page\/3\" component={<h1>PAGE 3<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
+        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  return <>\r\n    <route-link href=\"\/\">PADE 1<\/route-link>\r\n    <route-link href=\"\/page\/2\">PADE 2<\/route-link>\r\n    <route-link href=\"\/page\/3\">PADE 3<\/route-link>\r\n\r\n    <route-switch path=\"\/\" unique={true} component={<h1>PAGE 1<\/h1>} \/>\r\n    <route-switch path=\"\/page\/2\" component={<h1>PAGE 2<\/h1>} \/>\r\n    <route-switch path=\"\/page\/3\" component={<h1>PAGE 3<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
         emitCode={emitCode2}
     />
     <br />
     <br />
     <p class="description-text georgian-text ">
-        {`<routing> `} ტეგი არენდერებს ifEmptyComponent ს თუ როუტინგისას არ იარსებებს არცერთი მასში მოთავსებული html ელემენტი
+        {`<route-block> `} ტეგი არენდერებს ifEmptyComponent ს თუ როუტინგისას არ იარსებებს არცერთი მასში მოთავსებული html ელემენტი
     </p>
     <CodeResultViewBox
         fileName="1.tsx"
-        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  return <>\r\n    <switch href=\"\/page\/1\">PADE 1<\/switch>\r\n    <switch href=\"\/page\/2\">PADE 2<\/switch>\r\n    <switch href=\"\/page\/3\">PADE 3<\/switch>\r\n\r\n    <routing ifEmptyComponent={<div> Route Empty <\/div>}>\r\n      <router path=\"\/page\/2\" component={<h1>PAGE 2<\/h1>} \/>\r\n      <router path=\"\/page\/3\" component={<h1>PAGE 3<\/h1>} \/>\r\n    <\/routing>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
+        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  return <>\r\n    <route-link href=\"\/page\/1\">PADE 1<\/route-link>\r\n    <route-link href=\"\/page\/2\">PADE 2<\/route-link>\r\n    <route-link href=\"\/page\/3\">PADE 3<\/route-link>\r\n\r\n    <route-block ifEmptyComponent={<div> Route Empty <\/div>}>\r\n      <route-switch path=\"\/page\/2\" component={<h1>PAGE 2<\/h1>} \/>\r\n      <route-switch path=\"\/page\/3\" component={<h1>PAGE 3<\/h1>} \/>\r\n    </route-block>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
         emitCode={emitCode3}
     />
 

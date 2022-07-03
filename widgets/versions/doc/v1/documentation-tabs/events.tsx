@@ -32,7 +32,7 @@ export const eventsDocs = <div>
     </p>
     <CodeResultViewBox
         fileName="1.tsx"
-        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  let RouteCount = 1\r\n  window.addEventListener(\"popstate\", () => {\r\n    ++RouteCount\r\n  });\r\n  return <>\r\n    <switch href=\"\/\">PADE 1<\/switch>\r\n    <switch href=\"\/page\/2\">PADE 2<\/switch>\r\n    <switch href=\"\/page\/3\">PADE 3<\/switch>\r\n\r\n    <router path=\"\/\" unique={true} component={<h1>Count {RouteCount}<\/h1>} \/>\r\n    <router path=\"\/page\/2\" component={<h1>Count {RouteCount}<\/h1>} \/>\r\n    <router path=\"\/page\/3\" component={<h1>Count {RouteCount}<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>);"}
+        code={"import kix from \"kix\"\r\n\r\nfunction Routing() {\r\n  let RouteCount = 1\r\n  window.addEventListener(\"popstate\", () => {\r\n    ++RouteCount\r\n  });\r\n  return <>\r\n    <route-link href=\"\/\">PADE 1<\/route-link>\r\n    <route-link href=\"\/page\/2\">PADE 2<\/route-link>\r\n    <route-link href=\"\/page\/3\">PADE 3<\/route-link>\r\n\r\n    <route-switch path=\"\/\" unique={true} component={<h1>Count {RouteCount}<\/h1>} \/>\r\n    <route-switch path=\"\/page\/2\" component={<h1>Count {RouteCount}<\/h1>} \/>\r\n    <route-switch path=\"\/page\/3\" component={<h1>Count {RouteCount}<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>);"}
         emitCode={emitCode1}
     />
 

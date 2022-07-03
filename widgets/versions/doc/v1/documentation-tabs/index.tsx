@@ -7,6 +7,7 @@ import { eventsDocs } from "./events"
 import { parametersDocs } from "./Parameters"
 import { propsDoc } from "./props"
 import { quickStartDoc } from "./quick-start"
+import { routeToolsDocs } from "./routeTools"
 import { routingDoc } from "./routing"
 
 
@@ -71,12 +72,7 @@ export const documentationTabs: TabMenuItemType[] = [
             },
             {
                 tabTitle: "Tools",
-                component: <div>
-                    <h1 class="title-text">ნავიგაცია</h1>
-                    <p class="description-text georgian-text ">
-                        ნავიგაცია KIX-ში არის ძალიან მინიმალიზირებული ის უმეტესად დაფუძნებულია Vanilla JS ის ფუნქციონალზე და არის საკმაოდ მინიმალისტური და გამოირჩევა მაღალი წარმადობით
-                    </p>
-                </div>,
+                component: routeToolsDocs,
                 path: "route/tools",
             }
         ]

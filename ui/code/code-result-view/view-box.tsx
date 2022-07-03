@@ -3,7 +3,7 @@ import "./style.scss"
 import { CodeResultView } from "./view"
 
 export type CodeViewBoxType = CodeViewType & {
-    emitCode: () => any
+    emitCode?: () => any
 }
 type Props = CodeViewBoxType
 export const CodeResultViewBox = (props: Props) => {

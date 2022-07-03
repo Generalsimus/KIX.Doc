@@ -43,14 +43,14 @@ export const parametersDocs = <div>
     </p>
     <CodeResultViewBox
         fileName="1.tsx"
-        code={"import kix, { Router } from \"kix\"\r\n\r\nfunction Routing() {\r\n  const { params } = Router\r\n  return <>\r\n    <switch href=\"\/page\/1\">PADE 1<\/switch>\r\n    <switch href=\"\/page\/2\">PADE 2<\/switch>\r\n    <switch href=\"\/page\/3\">PADE 3<\/switch>\r\n\r\n    <router path=\"\/page\/:id\" component={<h1>PAGE {params.id}<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
+        code={"import kix, { Router } from \"kix\"\r\n\r\nfunction Routing() {\r\n  const { params } = Router\r\n  return <>\r\n    <route-link href=\"\/page\/1\">PADE 1</route-link>\r\n    <route-link href=\"\/page\/2\">PADE 2</route-link>\r\n    <route-link href=\"\/page\/3\">PADE 3</route-link>\r\n\r\n    <route-switch path=\"\/page\/:id\" component={<h1>PAGE {params.id}<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
         emitCode={emitCode4}
     />
     <br />
     <br />
     <CodeResultViewBox
         fileName="1.tsx"
-        code={"import kix, { Router } from \"kix\"\r\n\r\nfunction Routing() {\r\n  const { params } = Router\r\n  return <>\r\n    <switch href=\"\/page\/Naomi\/user\">PAGE Naomi<\/switch>\r\n    <switch href=\"\/page\/Perry\/user\">PAGE Perry<\/switch>\r\n    <switch href=\"\/page\/Daphne\/user\">PAGE Daphne<\/switch>\r\n\r\n    <router path=\"\/page\/:name\/user\" component={<h1>User: {params.name}<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
+        code={"import kix, { Router } from \"kix\"\r\n\r\nfunction Routing() {\r\n  const { params } = Router\r\n  return <>\r\n    <route-link href=\"\/page\/Naomi\/user\">PAGE Naomi</route-link>\r\n    <route-link href=\"\/page\/Perry\/user\">PAGE Perry</route-link>\r\n    <route-link href=\"\/page\/Daphne\/user\">PAGE Daphne</route-link>\r\n\r\n    <route-switch path=\"\/page\/:name\/user\" component={<h1>User: {params.name}<\/h1>} \/>\r\n  <\/>\r\n}\r\n\r\nkix(document.body, <Routing \/>)"}
         emitCode={emitCode5}
     />
 

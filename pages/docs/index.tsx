@@ -13,18 +13,18 @@ export function DocumentationPage() {
             <DocTabs tabs={currentCodeVersionExamples.documentationTabs} />
         </div>
         <div class="menu-tab-content flex content-center w100">
-            <routing ifEmptyComponent={<div>EMPTY</div>} >
+            <route-block ifEmptyComponent={<div>EMPTY</div>} >
                 {currentCodeVersionExamples.documentationTabs.map(tab => {
                     return <Routes tab={tab} />
                 })}
-            </routing>
+            </route-block>
         </div>
     </div>
 }
 
 function Routes(props: { tab: TabMenuItemType }) {
     return <>
-        {props.tab && <router path={`/docs/${props.tab.path}`} unique={true} component={props.tab.component} />}
+        {props.tab && <route-switch path={`/docs/${props.tab.path}`} unique={true} component={props.tab.component} />}
         {props.tab.childTabs?.map((childTab) => {
             return <Routes tab={childTab} />
         })}
