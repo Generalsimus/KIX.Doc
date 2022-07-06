@@ -21,10 +21,7 @@ const emitCode1 = () => {
         <h1>PAGE 1</h1>
         {currentHref}
     </>
-    return <iframe src="" frameborder="0" onLoad={function () {
-        this.contentWindow && kix(this.contentWindow.document.body, HTML)
-    }}>
-    </iframe>
+    return HTML
 }
 const emitCode2 = () => {
     const routes = {
@@ -44,10 +41,7 @@ const emitCode2 = () => {
         })}
         {currentHref}
     </>
-    return <iframe src="" frameborder="0" onLoad={function () {
-        this.contentWindow && kix(this.contentWindow.document.body, HTML)
-    }}>
-    </iframe>
+    return HTML
 }
 const emitCode3 = () => {
     const routes = {
@@ -67,10 +61,7 @@ const emitCode3 = () => {
         })}
         {currentHref}
     </>
-    return <iframe src="" frameborder="0" onLoad={function () {
-        this.contentWindow && kix(this.contentWindow.document.body, HTML)
-    }}>
-    </iframe>
+    return HTML
 }
 export const routingDoc = <div>
     <h1 class="title-text">ნავიგაცია  KIX ში</h1>

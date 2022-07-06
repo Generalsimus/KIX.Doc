@@ -12,10 +12,7 @@ const emitCode4 = () => {
         })}
         <h1>PAGE {currentIndex}</h1>
     </>
-    return <iframe src="" frameborder="0" onLoad={function () {
-        this.contentWindow && kix(this.contentWindow.document.body, HTML)
-    }}>
-    </iframe>
+    return HTML
 }
 const emitCode5 = () => {
     let currentIndex: number | undefined = undefined
@@ -30,10 +27,7 @@ const emitCode5 = () => {
         {currentIndex !== undefined && <h1>User: {names[currentIndex]}</h1>}
     </>
 
-    return <iframe src="" frameborder="0" onLoad={function () {
-        this.contentWindow && kix(this.contentWindow.document.body, HTML)
-    }}>
-    </iframe>
+    return HTML
 }
 export const parametersDocs = <div>
     <h1 class="title-text">ნავიგაციის პარამეტრეი KIX ში</h1>

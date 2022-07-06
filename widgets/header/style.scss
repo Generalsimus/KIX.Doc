@@ -9,6 +9,10 @@
         margin-right: 10px;
     }
 
+    .burger-menu {
+        display: none;
+    }
+
     .logo {
         svg {
             width: 35px;
@@ -79,6 +83,8 @@
             }
 
             .burger-menu {
+                display: block;
+
                 svg {
                     $scale: 1.7;
                     width: calc(15px * #{$scale});

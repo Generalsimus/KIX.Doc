@@ -31,14 +31,19 @@
         border: none;
     }
 
+    // .code {
+    //     width: 100%;
+    //     width: -moz-available;
+    //     /* WebKit-based browsers will ignore this. */
+    //     width: -webkit-fill-available;
+    //     /* Mozilla-based browsers will ignore this. */
+    //     width: fill-available;
+    // }
+
     .result {
         font-size: 14px;
         background-color: #fff;
-        // width: 40%;
-    }
-
-    .code {
-        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
     }
 
     .tabs-list {

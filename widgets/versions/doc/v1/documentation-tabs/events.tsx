@@ -19,10 +19,7 @@ const emitCode1 = () => {
         })}
         {currentHref}
     </>
-    return <iframe src="" frameborder="0" onLoad={function () {
-        this.contentWindow && kix(this.contentWindow.document.body, HTML)
-    }}>
-    </iframe>
+    return HTML
 }
 export const eventsDocs = <div>
     <h1 class="title-text">ნავიგაციის ევენთები KIX ში</h1>

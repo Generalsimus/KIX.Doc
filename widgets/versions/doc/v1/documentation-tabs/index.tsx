@@ -9,6 +9,7 @@ import { propsDoc } from "./props"
 import { quickStartDoc } from "./quick-start"
 import { routeToolsDocs } from "./routeTools"
 import { routingDoc } from "./routing"
+import { useListenerDocs } from "./useListener"
 
 
 
@@ -18,7 +19,6 @@ export interface TabMenuItemType {
     component?: JSX.Element,
     childTabs?: TabMenuItemType[]
 }
-window.history.pushState
 
 export const documentationTabs: TabMenuItemType[] = [
     {
@@ -82,7 +82,7 @@ export const documentationTabs: TabMenuItemType[] = [
         childTabs: [
             {
                 tabTitle: "useListener()",
-                component: <div>as22222dfasdf</div>,
+                component: useListenerDocs,
                 path: "uselistener",
             }
         ]
