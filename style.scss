@@ -18,6 +18,10 @@ body {
     font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+.f12 {
+    font-size: 12px;
+}
+
 a {
     text-decoration: none;
 }
@@ -27,9 +31,11 @@ h1 {
 }
 
 .padding-container {
-
     padding: 0 40px;
+}
 
+.description-text {
+    font-family: JetBrainsMono;
 }
 
 .flex {

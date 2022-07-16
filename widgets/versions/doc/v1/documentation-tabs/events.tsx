@@ -24,7 +24,7 @@ const emitCode1 = () => {
 export const eventsDocs = <div>
     <h1 class="title-text">ნავიგაციის ევენთები KIX ში</h1>
     <br />
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         KIX ი ნავიგაციის კონტროლისთვის იყენებს ჯავასკრიფტში უკვე არსებულ "popstate" ევენთს
     </p>
     <CodeResultViewBox

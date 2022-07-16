@@ -1,0 +1,27 @@
+.social-links {
+
+    // display: flex;
+    a {
+        color: #ebebeb;
+        // font-weight: bold;
+        font-weight: 100;
+        font-size: xxx-large;
+
+        &:hover {
+            color: #cbcbcb
+        }
+
+    }
+
+    
+
+
+    //pi * x/y = ($n * $pi / 4)
+    // @for $i from 0 to 15 {
+    //     &:nth-child(#{$i}) {
+    //         // $randomValue: random(100) / 100 * 100%;
+    //         // width: calc(100% - #{$randomValue});
+    //         // margin-left: #{$randomValue};
+    //     }
+    // }
+}

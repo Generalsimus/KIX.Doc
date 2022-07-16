@@ -3,18 +3,17 @@ import { codeVersionExamples } from "./doc"
 import kix, { Component } from "kix"
 import { DropDownSmallInput } from "../../ui/dropdown-input"
 import { ValueOf } from "../../generics"
+import { ObjectKeys } from "../../utils/ObjectKeys"
 
 
 
 
 export const Versions = () => {
-    const state = {
-        value: getVersionName()
-    };
 
+    let activeVersion = getVersionName()
     return <DropDownSmallInput
-        value={state.value}
-        options={Object.keys(codeVersionExamples).map(versionName => {
+        value={activeVersion}
+        options={ObjectKeys(codeVersionExamples).map(versionName => {
             return {
                 label: `v${versionName}.x`,
                 value: versionName
@@ -22,7 +21,7 @@ export const Versions = () => {
         })}
         onChange={({ value }) => {
             localStorage.setItem("version", value);
-            state.value = defaultVersion.version = value;
+            activeVersion = defaultVersion.version = value;
         }} />
 }
 

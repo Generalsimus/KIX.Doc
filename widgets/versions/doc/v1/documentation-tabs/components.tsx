@@ -1,27 +1,37 @@
 import { CodeTabViewResult } from "../../../../../ui/code/code-result-view/tab-view";
 import { CodeResultViewBox } from "../../../../../ui/code/code-result-view/view-box";
 const emitCode1 = () => {
-    let date = new Date()
-    setInterval(() => {
-        date = new Date()
-    }, 1000)
-    return <div>Date: {date}!</div>
+     
+
+function DateNow() {
+  const date  = new Date();
+
+  return <span>Date: {date}</span>;
+}
+
+return <DateNow />
+
 }
 export const componentsDoc = <div>
     <h1 class="title-text">კომპონენტები  KIX ში</h1>
-    <p class="description-text georgian-text ">
+    <p class="description-text   ">
         კოპონენტები KIX ში განხსვავდება ჩვეულებრივ JSX ში მიღებული კომპონენტესბისგან,
-        კომპონენტები ქიქსში რენდერდება ერთჯერადად და არ ხდება მათი გადარენდერება
+        კომპონენტები ქიქსში რენდერდება სტატიკურად და არ ხდება მათი გადარენდერება
         რაც გვაძლევს უფრო მაღალ წარმადობას
     </p>
     {/* <br /> */}
-    <CodeTabViewResult
+    <CodeResultViewBox
+        fileName="1.tsx"
+        code={"import kix from \"kix\";\r\n\r\nfunction DateNow() {\r\n  const date  = new Date();\r\n\r\n  return <span>Date: {date}<\/span>;\r\n}\r\n\r\nkix(document.body, <DateNow \/>);\r\n"}
+        emitCode={emitCode1}
+    />
+    {/* <CodeTabViewResult
         codes={[
             {
                 typeName: "JavaScript",
                 files: [{
                     fileName: '1.tsx',
-                    code: "import kix from \"kix\"\r\n\r\nfunction ShowIndex(props) {\r\n  return <h1>INDEX: {props.index}<\/h1>\r\n}\r\n\r\nlet increment = 0\r\n\r\nsetInterval(() => {\r\n  increment++\r\n}, 1000)\r\n\r\nkix(document.body, <ShowIndex index={increment} \/>)",
+                    code: "import kix from \"kix\";\r\n\r\nfunction DateNow() {\r\n  const date  = new Date();\r\n\r\n  return <span>Date: {date}<\/span>;\r\n}\r\n\r\nkix(document.body, <DateNow \/>);\r\n",
                     emitCode: emitCode1
                 }]
             },
@@ -34,15 +44,15 @@ export const componentsDoc = <div>
                 }]
             }
         ]}
-    />
+    /> */}
     <br />
-    <p class="description-text georgian-text ">
-        ფუნქციური კომპონენტები KIX ში რენდერდება ერთჯერადად KIX ში ნებისმიერი ობიექტის property არის დინამიურად ცვლადი ქვენ არ გიწევთ იზრუნოთ მისი
-        მეორადი რენდერის საფრთხის თავიდნა აცილებაზე
+    <br />
+    <p class="description-text   ">
+        აპლიკაცია გთავაზობთ როგორც ფუნქციური ისე კლასობრივი კომპონენტების სრულ მსახრაჭერას
     </p>
     <CodeResultViewBox
         fileName="3.tsx"
-        code={"import kix from \"kix\";\r\n\r\nfunction Hello() {\r\n  let date = new Date();\r\n  setInterval(() => {\r\n    date = new Date();\r\n  }, 1000);\r\n  return <div>Date: {date}!<\/div>;\r\n}\r\n\r\nkix(document.body, <Hello \/>);"}
+        code={"import kix from \"kix\";\r\n\r\nclass DateNow {\r\n    date = new Date();\r\n\r\n    render() {\r\n        return <h4>Date: {this.date}<\/h4>;\r\n    }\r\n}\r\n\r\nkix(document.body, <DateNow \/>);\r\n"}
         emitCode={emitCode1}
     />
 </div>

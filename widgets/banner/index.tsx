@@ -10,7 +10,7 @@ export function Banner() {
             <h1 class="text-title">The Fastest And Easiest <br />JavaScript Framework</h1>
             <span class="text-decryption">Kicks is an app that helps you create high-performance apps easily and quickly</span>
 
-            <switch href="/docs/" class="button">Get Started</switch>
+            <route-link href="/docs/" class="button">Get Started</route-link>
         </div>
 
     </div>

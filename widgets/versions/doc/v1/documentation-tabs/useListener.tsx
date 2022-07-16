@@ -96,7 +96,7 @@ const emitCode4 = () => {
 }
 export const useListenerDocs = <div>
     <h1 class="title-text">.useListener() ფუნქცია KIX ში</h1>
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         ვინაიდან KIX ში არსებული ნავიგაცია მთლიანად დაფუძლებული vannila JS ის ფუნქციონალზე KIX ში როუტინგის სამართავად გამოიყენება იგივე ფუნქციები რაც ჩვეულებრივ javascript ში უკვე არსებობს
         <a class="url" href="https://developer.mozilla.org/en-US/docs/Web/API/History" target="_blank">ფუნქციებზე მეტის გასაგებად ეწვიეთ შემდეგ ბმულს </a>
     </p>

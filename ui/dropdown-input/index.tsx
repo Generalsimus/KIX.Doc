@@ -1,38 +1,46 @@
 import { ValueOf } from "../../generics"
 import "./style.scss"
-interface Option<V = any> {
+
+// type JSXElementConstructor<P> = ((props: P) => any) | (typeof Component<P>);
+
+// export type ComponentProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> =
+//   T extends JSXElementConstructor<infer P>
+//   ? P
+//   : T extends keyof JSX.IntrinsicElements
+//   ? JSX.IntrinsicElements[T]
+//   : {}; 
+
+interface Option<V> {
     label: any,
     value: V,
 }
-interface Props<V = any> {
-    value: V
+export const DropDownSmallInput = <V extends unknown>(props: {
+    value: V,
     options: Option<V>[]
     onChange: (value: Option<V>) => void
-}
-export const DropDownSmallInput = (props: Props) => {
-    const state = {
-        active: false
-    }
-    const getValue = (currentValue: string) => {
+}) => {
+    console.log("🚀 --> file: index.tsx --> line 22 --> valueAAAA", props.value);
+    let dropMenuIsActive = false
+
+    const getValue = (currentValue: V) => {
         return props.options.find(({ value }) => value === currentValue)?.label;
     }
     return <div class="dropdown-small-input flex items-center content-center"
         tabindex="0"
         onBlur={() => {
-            state.active = false;
+            dropMenuIsActive = false;
         }}>
         <div
             class="value"
             onClick={() => {
-                state.active = true;
+                dropMenuIsActive = !dropMenuIsActive;
             }}>{getValue(props.value)}</div>
-        {
-            state.active &&
+        {dropMenuIsActive &&
             <div class="list flex direction-column content-center">
                 {props.options.map((option) => {
                     return <dov onClick={() => {
                         props.onChange(option);
-                        state.active = false;
+                        dropMenuIsActive = false;
                     }}>{option.label}</dov>
                 })}
             </div>}

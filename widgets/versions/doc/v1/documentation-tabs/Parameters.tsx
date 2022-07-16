@@ -32,7 +32,7 @@ const emitCode5 = () => {
 export const parametersDocs = <div>
     <h1 class="title-text">ნავიგაციის პარამეტრეი KIX ში</h1>
     <br />
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         ნავიგაციიის პარამეტრები ქიქსში ინახება kix მოდულიდან დაექსპორტებულ Params ობიექტში და იცვლებიან დინამიურად როუტინგიდ მისამართის ცვლილებასთან ერთად
     </p>
     <CodeResultViewBox

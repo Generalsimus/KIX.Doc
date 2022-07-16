@@ -30,8 +30,16 @@
     // .light {
     //     margin: 0 30px 0 auto;
     // }
+    .header-github-logo {
+        margin-left: 25px;
+        svg {
+            $scale: 0.6;
+            height: calc(32px * #{$scale});
+            width: calc(32px * #{$scale});
+        }
+    }
 
-    a {
+    a:not(.header-github-logo) {
         display: flex;
         align-items: center;
         padding: 0 30px;

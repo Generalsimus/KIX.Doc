@@ -12,11 +12,11 @@ const emitCode2 = () => {
 export const propsDoc = <div>
     <h1 class="title-text">კომპონენტის Props-ები KIX ში</h1>
     {/* <br /> */}
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         KIX ში კომპონენტის Props-ები ისეთივე დინამიურია როგორც ნებისმიერი ობიექტის property
     </p>
     <br />
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         ფუნქციიის prop ში ჩაწოდებული ნებისმიერი ფროფერთი დინამიურად იცვლება
     </p>
     <CodeTabViewResult
@@ -47,7 +47,7 @@ export const propsDoc = <div>
     />
     <br />
     <br />
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         კლასობრივი კომპონენტის შემთხვევაში დარენდერებისას class ში წინასწარ იქმნება props იდან შემოსული property რომელიც დინამიურად იცვლება property ის ცვლილებისას
     </p>
     <CodeTabViewResult

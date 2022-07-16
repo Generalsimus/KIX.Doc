@@ -66,7 +66,7 @@ const emitCode3 = () => {
 export const routingDoc = <div>
     <h1 class="title-text">ნავიგაცია  KIX ში</h1>
     <br />
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         ნავიგაცია KIX-ში არის ძალიან მინიმალიზირებული ის უმეტესად დაფუძნებულია Vanilla JS ის ფუნქციონალზე და არის საკმაოდ მინიმალისტური და გამოირჩევა მაღალი წარმადობით
     </p>
     <CodeResultViewBox
@@ -76,7 +76,7 @@ export const routingDoc = <div>
     />
     <br />
     <br />
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         unique ფროფერთი განსაზღვრავს path მისამართის უნიკალურობას როუტინგის პროცესისას
     </p>
     <CodeResultViewBox
@@ -86,7 +86,7 @@ export const routingDoc = <div>
     />
     <br />
     <br />
-    <p class="description-text georgian-text ">
+    <p class="description-text ">
         {`<route-block> `} ტეგი არენდერებს ifEmptyComponent ს თუ როუტინგისას არ იარსებებს არცერთი მასში მოთავსებული html ელემენტი
     </p>
     <CodeResultViewBox

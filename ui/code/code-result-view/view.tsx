@@ -8,7 +8,7 @@ type Props = CodeBoxViewType
 export const CodeResultView = (props: Props) => {
     return <div class="tab-code flex h100 content-end">
         {props.emitCode && <div class="result ">
-            <iframe src="" frameborder="0" onLoad={function () {
+            <iframe class="h100" src="" frameborder="0" onLoad={function () {
                 this.contentWindow && kix(this.contentWindow.document.body, props.emitCode?.())
             }}>
             </iframe>

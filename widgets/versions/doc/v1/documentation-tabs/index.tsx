@@ -10,6 +10,8 @@ import { quickStartDoc } from "./quick-start"
 import { routeToolsDocs } from "./routeTools"
 import { routingDoc } from "./routing"
 import { useListenerDocs } from "./useListener"
+// import ss from "../../../../../package.json"
+// console.log("🚀 --> file: index.tsx --> line 14 --> ss", ss);
 
 
 
@@ -31,7 +33,7 @@ export const documentationTabs: TabMenuItemType[] = [
             },
             {
                 tabTitle: "Introduction",
-                component: <div>სადასდას</div>,
+                component: <div>აქ დაწერე რა არის როგორ მშობს რა შხესძლებლობებს ფლობს რამე რუმეები და დოკის ლინკები დაურთე თან</div>,
                 path: "child/Tasdab1",
             }
         ]
