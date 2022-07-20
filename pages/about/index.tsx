@@ -1,6 +1,7 @@
 import { DescriptionContainer } from "../../widgets/description-container"
+import { RoutePageComponent } from "../../widgets/versions"
 import "./style.scss"
-export const AboutPage = () => {
+export const AboutPage: RoutePageComponent = () => {
     return <DescriptionContainer>
         <div class="about-page w100 h100">
             <h1>რატომ შეიქმნა KIX და ვინ შექმნა ის?</h1>

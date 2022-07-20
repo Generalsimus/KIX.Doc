@@ -1,0 +1,7 @@
+$startAt: 0.4em;
+$range: 5;
+@for $i from 1 through $range {
+  .size-#{$i} {
+    font-size: #{$startAt * ($range / $i)};
+  }
+}

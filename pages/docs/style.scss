@@ -1,23 +1,166 @@
 .documentation-page {
-    // padding: 0 200px;
-    // width: 90%;
-    margin: 0px auto;
-    flex: 1;
+  // padding: 0 200px;
+  // width: 90%;
+  margin: 0px auto;
+  flex: 1;
+
+  .menu-tabs {
+    opacity: 1;
+    transition: all 0.2s ease-out;
+    background-color: #ebebeb;
+    border-right: 1px solid #e5e5e5;
+    width: 350px;
+    padding: 15px 0px;
+  }
+  $contentWidth: 50em;
+  .menu-tab-content {
+    opacity: 1;
+    width: $contentWidth;
+    margin: 50px auto;
+    > * {
+      width: 100%;
+    }
+    // overflow: hidden;
+    .title-text {
+    }
+  }
+
+  .tabs-burger-switch {
+    $burger-color: #4f4f4f;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    background-color: #ebebeb;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #{$burger-color};
+    box-shadow: 0 0 10px 0px #{$burger-color};
+
+    .burger-container {
+      > * {
+        background-color: #{$burger-color};
+      }
+    }
+  }
+  @media only screen and (max-width: 1300px) {
+    // .menu-tab-content {
+    //   width: $contentWidth * 0.95;
+    // }
+    .menu-tabs {
+      width: 300px;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.85;
+    }
+  }
+  @media only screen and (max-width: 1085px) {
+    .menu-tab-content {
+      width: $contentWidth;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .tab-code {
+      .code {
+        width: calc(100% - 200px);
+      }
+    }
+    .menu-tab-content {
+      width: $contentWidth * 0.85;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .code-result-view {
+      $scaleSize: 1;
+      .tab-code {
+        .code {
+          width: 100%;
+        }
+        flex-direction: column-reverse;
+        .result {
+          border-left: none;
+          border-top: 1px solid #ebebeb;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.8;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.75;
+    }
+  }
+  @media only screen and (max-width: 660px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.7;
+    }
+  }
+  @media only screen and (max-width: 630px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.6;
+    }
+  }
+  @media only screen and (max-width: 530px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.55;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.5;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.48;
+    }
+  }
+  @media only screen and (max-width: 430px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.44;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .menu-tab-content {
+      width: $contentWidth * 0.4;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .menu-tab-content {
+      max-width: 100%;
+    }
+  }
+  @media only screen and (max-width: 1085px) {
+    &:not(.active) {
+      .menu-tabs {
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    &.active {
+      .menu-tab-content {
+        display: none;
+      }
+    }
 
     .menu-tabs {
-        background-color: #ebebeb;
-        border-right: 1px solid #e5e5e5;
-        width: 350px;
-        padding: 15px 0px;
+      transform: translateX(0%);
+      overflow: auto;
+      height: 100%;
+      position: absolute;
+      width: 100%;
     }
-
-    .menu-tab-content {
-        max-width: 50em;
-        margin: 50px auto;
-
-
-        .title-text {}
-
-    }
-
+  }
 }

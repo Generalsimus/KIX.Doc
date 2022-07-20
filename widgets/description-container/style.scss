@@ -1,4 +1,69 @@
+$container-width: 50em;
 .description-container {
-    margin: 50px 0;
-    width: 50em;
+  margin: 50px 0;
+  width: $container-width;
+  max-width: 100%;
+}
+// TODO: AUTO CALCULATE WIDTH
+// $start-max-width: 900px;
+// $count: 100;
+// @for $i from 1 through $count {
+//   $index: $count - $i;
+//   $ratio: $index/$count;
+//   @media only screen and (max-width: #{$start-max-width * $ratio}) {
+//     .description-container {
+//       width: $container-width * $ratio;
+//     }
+//   }
+// }
+@media only screen and (max-width: 900px) {
+  .description-container {
+    width: $container-width * 0.95;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .description-container {
+    width: $container-width * 0.85;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .description-container {
+    width: $container-width * 0.75;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .description-container {
+    width: $container-width * 0.7;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .description-container {
+    width: $container-width * 0.65;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .description-container {
+    width: $container-width * 0.6;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .description-container {
+    width: $container-width * 0.5;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .description-container {
+    width: $container-width * 0.45;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .description-container {
+    width: $container-width * 0.4;
+  }
 }
