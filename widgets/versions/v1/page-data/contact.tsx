@@ -13,26 +13,26 @@ const socialLinks = {
 export const contactPageData: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: ["კონტაქტი"],
+        text: ["Text_49"],
         size: 1
     }, {
         type: ObjectTypes.description,
         text: [
-            `ტროექტის ავტორთან დასაკავშირებლად გამოიყენეთ მეილი (`,
+            `Text_50`,
             {
                 type: StringTypeEnum.url,
                 url: "mailto:sosotsertsvadze2@gmail.com",
                 text: ["sosotsertsvadze2@gmail.com"]
             },
-            `) ან დაუკავშირდეთ მის linkedin ის ოფიციალურ `,
+            `Text_51`,
             {
                 type: StringTypeEnum.url,
                 url: "https://www.linkedin.com/in/soso-tsertsvadze-795565204/",
-                text: ["გვერდს"]
+                text: ["Text_52"]
             },
         ],
         size: 5
-    }, {
+    }, [], [], {
         type: ObjectTypes.jsx,
         jsx: <div class="w100 flex items-center direction-column">{
             ObjectKeys(socialLinks).map(key => {

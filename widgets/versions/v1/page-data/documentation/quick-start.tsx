@@ -24,7 +24,7 @@ export const quickStartDocs: ObjectMultiItemsTypes = [
         ],
         size: 4
     },
-    [[]],
+    [],
     {
         type: ObjectTypes.description,
         text: [`Text_6`]
