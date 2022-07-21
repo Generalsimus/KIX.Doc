@@ -1,5 +1,5 @@
-import { DocPageSideBarRouts } from "../.."
-import { objectsToJsx, ObjectTypes } from "../../../objects-to-jsx"
+// import { DocPageSideBarRouts } from "../../.."
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx"
 import { componentsDocs } from "./components"
 import { eventsDocs } from "./events"
 import { parametersDocs } from "./Parameters"
@@ -13,7 +13,14 @@ import { useListenerDocs } from "./useListener"
 
 
 
-export const DocumentationResources: DocPageSideBarRouts = {
+export type DocPageSideBarRouts = {
+    [pageName: string]: Omit<DocPageSideBarRouts, "component"> | {
+        component: ObjectMultiItemsTypes
+    } | undefined
+}
+
+
+export const docPageData: DocPageSideBarRouts = {
     "Getting Started": {
         "Quick Start": {
             component: quickStartDocs
@@ -25,7 +32,7 @@ export const DocumentationResources: DocPageSideBarRouts = {
                     text: [`აქ დაწერე რა არის როგორ მშობს რა შხესძლებლობებს ფლობს რამე რუმეები და დოკის ლინკები დაურთე თან`]
                 }
             ]
-            
+
         }
     },
     "Structure": {

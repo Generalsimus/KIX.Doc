@@ -19,7 +19,7 @@ export const DropDownSmallInput = <V extends unknown>(props: {
     options: Option<V>[]
     onChange: (value: Option<V>) => void
 }) => {
-    console.log("🚀 --> file: index.tsx --> line 22 --> valueAAAA", props.value);
+    console.log("🚀 --> file: index.tsx --> line 22 --> value", props);
     let dropMenuIsActive = false
 
     const getValue = (currentValue: V) => {

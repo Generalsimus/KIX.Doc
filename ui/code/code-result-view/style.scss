@@ -1,62 +1,62 @@
 .code-result-view {
-    // background-color: aliceblue;
-    box-shadow: 0 1px 1px 0 RGB(66 66 66/8%), 0 1px 3px 1px RGB(66 66 66/16%);
-    border-radius: 2px;
-    overflow: hidden;
+  // background-color: aliceblue;
+  box-shadow: 0 1px 1px 0 RGB(66 66 66/8%), 0 1px 3px 1px RGB(66 66 66/16%);
+  border-radius: 2px;
+  overflow: hidden;
 
-    .code-file-names {
-        border-bottom: 1px solid #EBEBEB;
-        border-left: none;
-        border-right: none;
-        background-color: #fff;
+  .code-file-names {
+    border-bottom: 1px solid #ebebeb;
+    border-left: none;
+    border-right: none;
+    background-color: #fff;
 
-        >* {
-            font-size: 14px;
-            // margin-left: 5px;
-            line-height: 0;
-            cursor: pointer;
-            padding: 10px 5px;
+    > * {
+      font-size: 14px;
+      // margin-left: 5px;
+      line-height: 0;
+      cursor: pointer;
+      padding: 10px 5px;
 
-            &.active {
-                background-color: #efefef;
-            }
-        }
+      &.active {
+        background-color: #efefef;
+      }
     }
+  }
 
-    .tab-code {
-        flex-direction: row-reverse;
-    }
+  .tab-code {
+    flex-direction: row-reverse;
+  }
 
-    .code-highlighter {
-        border: none;
-    }
+  .code-highlighter {
+    border: none;
+  }
 
-    // .code {
+  .code {
+    overflow: auto;
     //     width: 100%;
     //     width: -moz-available;
     //     /* WebKit-based browsers will ignore this. */
     //     width: -webkit-fill-available;
     //     /* Mozilla-based browsers will ignore this. */
     //     width: fill-available;
-    // }
+  }
 
-    .result {
-        font-size: 14px;
-        background-color: #fff;
-        border-left: 1px solid #ebebeb;
+  .result {
+    font-size: 14px;
+    background-color: #fff;
+    border-left: 1px solid #ebebeb;
+  }
+
+  .tabs-list {
+    border-bottom: 1px solid #ebebeb;
+
+    > * {
+      padding: 10px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #f5f5f5;
+      }
     }
-
-    .tabs-list {
-        border-bottom: 1px solid #ebebeb;
-
-        >* {
-            padding: 10px;
-            cursor: pointer;
-
-            &.active {
-                background-color: #f5f5f5;
-            }
-        }
-    }
-
+  }
 }

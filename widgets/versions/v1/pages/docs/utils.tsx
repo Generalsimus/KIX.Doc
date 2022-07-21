@@ -1,9 +1,10 @@
-import { ValueOf } from "../../generics";
-import { ObjectKeys } from "../../utils/ObjectKeys";
-import { stringToRoutePath } from "../../utils/stringToRoutePath";
-import { objectsToJsx } from "../../widgets/objects-to-jsx";
-import { DocPageSideBarRouts } from "../../widgets/versions";
+ 
+import { ObjectKeys } from "../../../../../utils/ObjectKeys";
+import { stringToRoutePath } from "../../../../../utils/stringToRoutePath";
+import { objectsToJsx } from "../../../../objects-to-jsx";
+import { DocPageSideBarRouts } from "../../page-data/documentation";
 
+ 
 type JsxRouteComponentsJsxType = (JSX.Element | undefined | JsxRouteComponentsJsxType)[]
 export const docRouteComponentsToJsx = (
     documentation: DocPageSideBarRouts,

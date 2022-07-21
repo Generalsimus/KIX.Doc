@@ -1,16 +1,13 @@
 // import kix from "kix";
 import kix from "kix"
-import { HomePage } from "./pages/home";
+// import { HomePage } from "./pages/home";
 import { Footer } from "./widgets/footer";
 import { Header } from "./widgets/header";
 import "./style.scss";
-import { DocumentationPage } from "./pages/docs";
-import { AboutPage } from "./pages/about";
-import { SponsorPage } from "./pages/sponsor";
-import { ContactPage } from "./pages/contact";
 import { ObjectKeys } from "./utils/ObjectKeys";
 import { currentVersionState } from "./widgets/versions";
 import { stringToRoutePath } from "./utils/stringToRoutePath";
+import { HomePage } from "./widgets/versions/v1/pages/home";
 
 
 
@@ -19,10 +16,12 @@ var HTML = <>
     <div class="route-box flex direction-column">
         <route-block ifEmptyComponent={<div> Route Empty </div>}>
             <route-switch path="/" unique={true} component={<HomePage path={"/"} />} />
-            {ObjectKeys(currentVersionState.headers).map((routeName) => {
+            {ObjectKeys(currentVersionState.pages).map((routeName) => {
                 const routePath = stringToRoutePath(routeName)
-                const RouteComponent = currentVersionState.headers[routeName]
-                return <route-switch path={routePath} component={<RouteComponent path={routePath} />} />
+                const RouteComponent = currentVersionState.pages[routeName]
+                if (RouteComponent) {
+                    return <route-switch path={routePath} component={<RouteComponent path={routePath} />} />
+                }
             })}
         </route-block>
     </div>

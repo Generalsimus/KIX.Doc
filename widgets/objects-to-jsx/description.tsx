@@ -8,5 +8,7 @@ export interface DescriptionObject extends DefaultConfigurations {
     text: StringType
 }
 export const description = (source: DescriptionObject) => {
-    return <p class={`description-text size-${source.size ?? 2}`}>{StringToJsx(source.text)}</p>
+    return <>
+        <p class={`description-text size-${source.size ?? 4}`}>{StringToJsx(source.text)}</p>
+    </>
 }

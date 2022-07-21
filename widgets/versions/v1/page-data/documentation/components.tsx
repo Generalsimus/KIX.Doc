@@ -1,4 +1,4 @@
-import { ObjectMultiItemsTypes, ObjectTypes } from "../../../objects-to-jsx";
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx";
 
 
 
@@ -17,12 +17,10 @@ const emitCode1 = () => {
 export const componentsDocs: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: ["კომპონენტები  KIX ში"]
+        text: ["Text_10"]
     }, {
         type: ObjectTypes.description,
-        text: [` კოპონენტები KIX ში განხსვავდება ჩვეულებრივ JSX ში მიღებული კომპონენტესბისგან,
-        კომპონენტები ქიქსში რენდერდება სტატიკურად და არ ხდება მათი გადარენდერება
-        რაც გვაძლევს უფრო მაღალ წარმადობას`]
+        text: ["Text_11"]
     }, {
         type: ObjectTypes.codeView,
         fileName: "1.tsx",
@@ -30,7 +28,7 @@ export const componentsDocs: ObjectMultiItemsTypes = [
         emitCode: emitCode1,
     }, [], [], {
         type: ObjectTypes.description,
-        text: [` აპლიკაცია გთავაზობთ როგორც ფუნქციური ისე კლასობრივი კომპონენტების სრულ მსახრაჭერას`]
+        text: [`Text_12`]
     }, {
         type: ObjectTypes.codeView,
         fileName: "3.tsx",

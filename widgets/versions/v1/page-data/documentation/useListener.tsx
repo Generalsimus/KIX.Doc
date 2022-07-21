@@ -1,8 +1,8 @@
-import kix, { useListener } from "kix";
-import { CodeResultViewBox } from "../../../../ui/code/code-result-view/view-box";
-import { ObjectMultiItemsTypes, objectsToJsx, ObjectTypes } from "../../../objects-to-jsx";
-import { StringTypeEnum } from "../../../objects-to-jsx/string-to-jsx";
-// import { CodeResultViewBox } from "../../../../../ui/code/code-result-view/view-box";
+import { useListener } from "kix";
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx";
+
+
+
 const emitCode1 = () => {
     function Component() {
         let state = { increment: 0 }
@@ -100,7 +100,7 @@ const emitCode4 = () => {
 export const useListenerDocs: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: [".useListener() ფუნქცია KIX ში"]
+        text: ["Text_38"]
     }, [], [], {
         type: ObjectTypes.codeView,
         fileName: "1.tsx",

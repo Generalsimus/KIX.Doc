@@ -3,10 +3,8 @@ import ka from "../../lang/ka.json"
 import en from "../../lang/en.json"
 import { ObjectKeys } from "../../utils/ObjectKeys";
 import { ValueOf } from "../../generics"
-export const languageState: typeof ka & typeof en = {
-    ...ka,
-    ...en
-}
+
+export const languageState: Record<string, string | undefined> = {}
 
 export const LanguageSwitch = () => {
     const optionsWithKeys = {
@@ -16,12 +14,27 @@ export const LanguageSwitch = () => {
     type LangKeys = keyof typeof optionsWithKeys
 
     let constCurrentLanguage: LangKeys = "EN"
-    const localStorageValue = localStorage.getItem("lang");
-    if (localStorageValue && localStorageValue in optionsWithKeys) {
-        constCurrentLanguage = localStorageValue as LangKeys
+
+
+
+    const setAndGetLang = () => {
+        const localStorageValue = localStorage.getItem("lang")
+        if (localStorageValue && localStorageValue in optionsWithKeys) {
+            constCurrentLanguage = localStorageValue as LangKeys
+        } else {
+            constCurrentLanguage = constCurrentLanguage
+        }
+
+        for (const key in languageState) {
+            languageState[key] = undefined
+        }
+        Object.assign(languageState, optionsWithKeys[constCurrentLanguage]);
+
+        return constCurrentLanguage
     }
-    console.log("🚀 --> file: index.tsx --> line 19 --> LanguageSwitch --> constCurrentLanguage", constCurrentLanguage);
-    Object.assign(languageState, optionsWithKeys[constCurrentLanguage]);
+
+    setAndGetLang();
+
     return <DropDownSmallInput
         value={constCurrentLanguage}
         options={ObjectKeys(optionsWithKeys).map(lang => {
@@ -31,8 +44,7 @@ export const LanguageSwitch = () => {
             }
         })}
         onChange={({ value }) => {
-            Object.assign(languageState, optionsWithKeys[value]);
-            constCurrentLanguage = value;
             localStorage.setItem("lang", value);
+            setAndGetLang();
         }} />
 }

@@ -1,6 +1,4 @@
 
-import { Burger } from "../../ui/burger"
-import { currentVersionState, RoutePageComponent } from "../../widgets/versions";
 // import { RoutePageComponent } from "../page-types";
 // import { currentCodeVersionExamples } from "../../widgets/versions"
 // import { TabMenuItemType } from "../../widgets/versions/doc/v1/documentation-tabs"
@@ -8,7 +6,8 @@ import "./style.scss"
 import { docRouteSwitchTabsToJsx } from "./utils";
 import { docRouteComponentsToJsx } from "./utils";
 import "./tabs.scss"
-import { objectsToJsx } from "../../widgets/objects-to-jsx";
+import { currentVersionState, RoutePageComponent } from "../../..";
+import { Burger } from "../../../../../ui/burger";
 
 
 export const DocumentationPage: RoutePageComponent = (props) => {
@@ -20,12 +19,12 @@ export const DocumentationPage: RoutePageComponent = (props) => {
 
     return <div class={`documentation-page  w100 flex content-between rltv ${burgerIsActive && "active"}`}>
         <div class="menu-tabs ">
-            
-            {docRouteSwitchTabsToJsx(currentVersionState.documentation, props.path)}
+
+            {docRouteSwitchTabsToJsx(currentVersionState.pagesData.doc, props.path)}
         </div>
         <div class="menu-tab-content flex content-center w100">
             <route-block ifEmptyComponent={<div>EMPTY</div>} >
-                {docRouteComponentsToJsx(currentVersionState.documentation, props.path)}
+                {docRouteComponentsToJsx(currentVersionState.pagesData.doc, props.path)}
             </route-block>
         </div>
         <div onClick={toggleBurger} class="tabs-burger-switch flex items-center direction-column content-center" >

@@ -6,63 +6,53 @@ import { ValueOf } from "../../generics"
 import { ObjectKeys } from "../../utils/ObjectKeys"
 import { v1 } from "./v1"
 import { ObjectMultiItemsTypes } from "../objects-to-jsx"
+import { sponsorPageData } from "./v1/page-data/sponsor"
 
 export type RoutePageComponent = JSX.EL<{
     path: string;
 }>
 
-export type DocPageSideBarRouts = {
-    [pageName: string]: Omit<DocPageSideBarRouts, "component"> | {
-        component: ObjectMultiItemsTypes
-    } | undefined
-}
 
-export interface VersionsObjectType {
-    headers: {
-        [path: string]: RoutePageComponent,
-    },
-    documentation: DocPageSideBarRouts
-    pagesData: {}
-}
-const versionsList = {
-    "1": v1,
-    "2": v1
-}
-type VersionKeyNameTypes = keyof typeof versionsList
 
 class VersionController extends Component {
-    currentVersionState: VersionsObjectType = { ...v1 }
+    versions = {
+        [v1.v]: v1,
+        [2]: {
+            ...v1,
+            v: 2,
+            pagesData: {
+                ...v1.pagesData,
+                sponsor: [],
+            }
+        }
+    }
+    currentVersionState: typeof v1 = this.setVersionName();
     constructor() {
         super();
-        this.currentVersionState = Object.assign({}, v1)
     }
-    currentVersion = this.getVersionName();
-    setVersionName(version: VersionKeyNameTypes) {
-        this.currentVersion = version
-        this.currentVersionState = Object.assign({}, v1)
-    }
-    getVersionName(): VersionKeyNameTypes {
-        let version = localStorage.getItem("version") || ""
-
-        if (version in versionsList) {
-            return version as VersionKeyNameTypes
+    setVersionName() {
+        let version: string | number = String(localStorage.getItem("version"));
+        if (!(version in this.versions)) {
+            version = ObjectKeys(this.versions)[0]
         }
-        return ObjectKeys(versionsList)[0]
+
+        if (this.currentVersionState) {
+            return Object.assign(this.currentVersionState, this.versions[version as any])
+        }
+        return { ...this.versions[version as any] }
     }
     render() {
         return <DropDownSmallInput
-            value={this.currentVersion}
-            options={ObjectKeys(versionsList).map(versionName => {
+            value={String(this.currentVersionState.v)}
+            options={Object.keys(this.versions).map(versionName => {
                 return {
                     label: `v${versionName}.x`,
                     value: versionName
                 }
             })}
             onChange={({ value }) => {
-                if (value) {
-                    localStorage.setItem("version", value);
-                    this.setVersionName(value)
-                }
+                localStorage.setItem("version", value + "");
+                this.setVersionName()
             }} />
     }
 }

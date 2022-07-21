@@ -1,7 +1,25 @@
-$startAt: 0.4em;
-$range: 5;
-@for $i from 1 through $range {
-  .size-#{$i} {
-    font-size: #{$startAt * ($range / $i)};
-  }
+// $startAt: 0.4em;
+// $range: 8;
+// @for $i from 1 through $range {
+//   .size-#{$i} {
+//     font-size: #{$startAt * ($range / $i)};
+//   }
+// }
+.size-1 {
+  font-size: 2em;
+}
+
+.size-2 {
+  font-size: 1.5em;
+}
+
+.size-3 {
+  font-size: 1.17em;
+}
+
+.size-4 {
+  margin-block-end: 1.33em;
+}
+.size-5 {
+  font-size: 0.83em;
 }

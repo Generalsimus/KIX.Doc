@@ -1,6 +1,7 @@
-import { ObjectMultiItemsTypes, ObjectTypes } from "../../../objects-to-jsx";
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx";
 
-// 
+
+
 const emitCode4 = () => {
     let currentIndex = 1
     const HTML = <>
@@ -33,11 +34,10 @@ const emitCode5 = () => {
 export const parametersDocs: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: ["ნავიგაციის პარამეტრეი KIX ში"]
+        text: ["Text_21"]
     }, [], {
         type: ObjectTypes.description,
-        text: [`    ნავიგაციიის პარამეტრები ქიქსში ინახება kix
-         მოდულიდან დაექსპორტებულ Params ობიექტში და იცვლებიან დინამიურად როუტინგიდ მისამართის ცვლილებასთან ერთად `]
+        text: [`Text_22`]
     }, {
         type: ObjectTypes.codeView,
         fileName: "1.tsx",

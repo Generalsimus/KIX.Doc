@@ -1,6 +1,6 @@
-import { ObjectMultiItemsTypes, ObjectTypes } from "../../../objects-to-jsx"
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx"
 
-// import { CodeTabViewResult } from "../../../../../ui/code/code-result-view/tab-view";
+
 const emitCode2 = () => {
 
     let increment = 0
@@ -14,13 +14,13 @@ const emitCode2 = () => {
 export const propsDocs: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: ["კომპონენტის Props-ები KIX ში"]
+        text: ["Text_13"]
     }, {
         type: ObjectTypes.description,
-        text: [` KIX ში კომპონენტის Props-ები ისეთივე დინამიურია როგორც ნებისმიერი ობიექტის property`]
+        text: [`Text_14`]
     }, [], {
         type: ObjectTypes.description,
-        text: [`ფუნქციიის prop ში ჩაწოდებული ნებისმიერი ფროფერთი დინამიურად იცვლება`]
+        text: [`Text_15`]
     }, {
         type: ObjectTypes.codeViewTabs,
         codes: [
@@ -47,8 +47,7 @@ export const propsDocs: ObjectMultiItemsTypes = [
         ]
     }, [], [], {
         type: ObjectTypes.description,
-        text: [` კლასობრივი კომპონენტის შემთხვევაში დარენდერებისას class ში წინასწარ იქმნება props იდან შემოსული
-         property რომელიც დინამიურად იცვლება property ის ცვლილებისას `]
+        text: [`Text_16`]
     }, {
         type: ObjectTypes.codeViewTabs,
         codes: [

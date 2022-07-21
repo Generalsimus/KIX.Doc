@@ -1,7 +1,8 @@
 import kix from "kix";
-import { CodeResultViewBox } from "../../../../ui/code/code-result-view/view-box";
-import { ObjectMultiItemsTypes, ObjectTypes } from "../../../objects-to-jsx";
-// import { CodeResultViewBox } from "../../../../../ui/code/code-result-view/view-box";
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx";
+
+
+
 const emitCode1 = () => {
     const routes = {
         "/": "PADE 1",
@@ -26,10 +27,10 @@ const emitCode1 = () => {
 export const eventsDocs: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: ["ნავიგაციის ევენთები KIX ში"]
+        text: ["Text_23"]
     }, [], {
         type: ObjectTypes.description,
-        text: [` KIX ი ნავიგაციის კონტროლისთვის იყენებს ჯავასკრიფტში უკვე არსებულ "popstate" ევენთს`]
+        text: [`Text_24`]
     }, {
         type: ObjectTypes.codeView,
         fileName: "1.tsx",

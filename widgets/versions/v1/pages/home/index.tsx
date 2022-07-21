@@ -1,11 +1,10 @@
+ 
 
-import { CodeView } from "../../ui/code/code-view";
-import { CommandView } from "../../ui/command-view";
-import { Banner } from "../../widgets/banner";
-import { Header } from "../../widgets/header";
-import { languageState } from "../../widgets/language-switch";
-import { RoutePageComponent } from "../../widgets/versions";
-
+import { RoutePageComponent } from "../../..";
+import { CodeView } from "../../../../../ui/code/code-view";
+import { CommandView } from "../../../../../ui/command-view";
+import { Banner } from "../../../../banner";
+import { languageState } from "../../../../language-switch";
 import "./style.scss";
 function render() {
     return <div>Hello World!</div>
@@ -54,12 +53,12 @@ export const HomePage: RoutePageComponent = () => {
                     <p class="read-simple-text">
 
 
-                        {languageState.home_page_description1}
+                        {languageState.Text_1}
                     </p>
                 </div>
             </div>
             <div class="install-instruction flex">
-                <p class="read-simple-text">{languageState.home_page_description2}</p>
+                <p class="read-simple-text">{languageState.Text_1}</p>
                 <div class="run-commands-list flex direction-column items-start">
                     <CommandView command="npm i -g kix" />
                     <CommandView command="kix new app-name" />

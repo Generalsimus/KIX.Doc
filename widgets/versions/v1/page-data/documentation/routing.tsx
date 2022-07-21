@@ -1,4 +1,4 @@
-import { ObjectMultiItemsTypes, ObjectTypes } from "../../../objects-to-jsx";
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx"
 
 
 
@@ -66,10 +66,10 @@ const emitCode3 = () => {
 export const routingDocs: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: ["ნავიგაცია  KIX ში"]
+        text: ["Text_17"]
     }, [], {
         type: ObjectTypes.description,
-        text: [` ნავიგაცია KIX-ში არის ძალიან მინიმალიზირებული ის უმეტესად დაფუძნებულია Vanilla JS ის ფუნქციონალზე და არის საკმაოდ მინიმალისტური და გამოირჩევა მაღალი წარმადობით`]
+        text: [`Text_18`]
 
     }, {
         type: ObjectTypes.codeView,
@@ -78,7 +78,7 @@ export const routingDocs: ObjectMultiItemsTypes = [
         emitCode: emitCode1
     }, [], [], {
         type: ObjectTypes.description,
-        text: [`unique ფროფერთი განსაზღვრავს path მისამართის უნიკალურობას როუტინგის პროცესისას`]
+        text: [`Text_19`]
     }, {
         type: ObjectTypes.codeView,
         fileName: "1.tsx",
@@ -86,7 +86,7 @@ export const routingDocs: ObjectMultiItemsTypes = [
         emitCode: emitCode2
     }, [], [], {
         type: ObjectTypes.description,
-        text: [`<route-block> ტეგი არენდერებს ifEmptyComponent ს თუ როუტინგისას არ იარსებებს არცერთი მასში მოთავსებული html ელემენტი`]
+        text: [`Text_20`]
     }, {
         type: ObjectTypes.codeView,
         fileName: "1.tsx",

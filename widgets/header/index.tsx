@@ -62,7 +62,7 @@ export function Header() {
             </div>
 
             <div class={`menu-items flex items-center h100 ${burgerMenuStatus ? "active" : ""}`}>
-                {ObjectKeys(currentVersionState.headers).map((routeName) => {
+                {ObjectKeys(currentVersionState.pages).map((routeName) => {
                     return <route-link href={stringToRoutePath(routeName)} onClick={onToggleDropMenu}>{routeName}</route-link>
                 })}
                 <a class="header-github-logo flex items-center" target="_blank" href="https://github.com/Generalsimus/KIX" >

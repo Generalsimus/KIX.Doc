@@ -1,12 +1,7 @@
-import kix from "kix";
-import { CodeTabViewResult } from "../../../../ui/code/code-result-view/tab-view";
-import { CodeResultViewBox } from "../../../../ui/code/code-result-view/view-box";
-import { ObjectMultiItemsTypes, objectsToJsx, ObjectTypes } from "../../../objects-to-jsx";
-import { StringTypeEnum } from "../../../objects-to-jsx/string-to-jsx";
-// import { CodeHighlighterBox } from "../../../../../ui/code/code-highlighter-box";
-// import { CodeTabViewResult } from "../../../../../ui/code/code-result-view/tab-view";
-// import { CodeResultView } from "../../../../../ui/code/code-result-view/view";
-// import { CodeResultViewBox } from "../../../../../ui/code/code-result-view/view-box";
+import { ObjectMultiItemsTypes, ObjectTypes } from "../../../../objects-to-jsx";
+import { StringTypeEnum } from "../../../../objects-to-jsx/string-to-jsx";
+
+
 
 const emitCode1 = () => {
     let currentIndex = 1
@@ -24,29 +19,27 @@ const emitCode1 = () => {
 export const routeToolsDocs: ObjectMultiItemsTypes = [
     {
         type: ObjectTypes.title,
-        text: ["ნავიგაციის დამხმარე ფუნქციები"]
+        text: ["Text_25"]
     },
     {
         type: ObjectTypes.description,
-        text: [` ვინაიდან KIX ში არსებული ნავიგაცია მთლიანად დაფუძლებული vannila JS
-         ის ფუნქციონალზე KIX ში როუტინგის სამართავად გამოიყენება იგივე
-          ფუნქციები რაც ჩვეულებრივ javascript ში უკვე არსებობს `,
+        text: [`Text_26`,
             {
                 type: StringTypeEnum.url,
                 url: "https://developer.mozilla.org/en-US/docs/Web/API/History",
-                text: ['ფუნქციებზე მეტის გასაგებად ეწვიეთ შემდეგ ბმულს ']
+                text: ['Text_27']
             }
         ]
     }, [], [], {
         type: ObjectTypes.description,
-        text: [`KIX როუტინგისას იყნრბს `,
+        text: [`Text_28`,
             {
                 type: StringTypeEnum.url,
                 url: "https://developer.mozilla.org/en-US/docs/Web/API/History/pushState",
                 text: ['.pushState()']
             },
-            `  ფუნქციას.`, [],
-            ` ხოლო როუტინგის გადასარეფრეშებლად საჭიროა popstate ევენთის გაშვება`
+            `Text_29`, [],
+            `Text_30`
         ]
     }, {
         type: ObjectTypes.codeViewTabs,
@@ -75,14 +68,14 @@ export const routeToolsDocs: ObjectMultiItemsTypes = [
         ]
     }, [], [], {
         type: ObjectTypes.description,
-        text: [`KIX როუტინგისას მისამართის ჩასანაცვლებლად იყენებს `,
+        text: [`Text_31`,
             {
                 type: StringTypeEnum.url,
                 url: "https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState",
                 text: ['.replaceState()']
             },
-            `  ფუნქციას.`, [],
-            ` ხოლო როუტინგის გადასარეფრეშებლად საჭიროა popstate ევენთის გაშვება`
+            `Text_32`, [],
+            `Text_33`
         ]
     }, {
         type: ObjectTypes.codeViewTabs,
@@ -111,13 +104,13 @@ export const routeToolsDocs: ObjectMultiItemsTypes = [
         ]
     }, [], [], {
         type: ObjectTypes.description,
-        text: [`KIX როუტინგისას გვერდის უკან დასაბრუნებლად იყნებს `,
+        text: [`Text_34`,
             {
                 type: StringTypeEnum.url,
                 url: "https://developer.mozilla.org/en-US/docs/Web/API/History/back",
                 text: ['.back()']
             },
-            `  ფუნქციას.`,
+            `Text_35`,
         ]
     },
     {
@@ -127,13 +120,13 @@ export const routeToolsDocs: ObjectMultiItemsTypes = [
 
     }, [], [], {
         type: ObjectTypes.description,
-        text: [`KIX როუტინგისას გვერდის წინ გადასასვლელად იყენებს `,
+        text: [`Text_36`,
             {
                 type: StringTypeEnum.url,
                 url: "https://developer.mozilla.org/en-US/docs/Web/API/History/forward",
                 text: ['.forward()']
             },
-            ` ფუნქციას.`,
+            `Text_37`,
         ]
     },
     {

@@ -1,3 +1,4 @@
+import { languageState } from "../language-switch"
 
 
 
@@ -12,7 +13,8 @@ export const StringToJsx = (stringObject: StringType): JSX.Element => {
             return <><br />{StringToJsx(element)}</>
         }
         if (typeof element === 'string') {
-            return element
+
+            return <>{languageState[element] || element}</>
         }
         switch (element.type) {
             case StringTypeEnum.url:

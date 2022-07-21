@@ -4,10 +4,12 @@ import { title, TitleObject } from "./title"
 import "./style.scss"
 import { codeView, CodeViewObject } from "./code-view"
 import { codeViewTabs, CodeViewTabsObject } from "./code-view-tabs"
+import { JsxObject, JsxToJsx } from "./jsx-to-jsx"
 
 export enum ObjectTypes {
     title,
     description,
+    jsx,
     command,
     codeView,
     codeViewTabs,
@@ -17,7 +19,7 @@ export enum ObjectTypes {
 export interface DefaultConfigurations {
     size?: number
 }
-export type ObjectItemsTypes = TitleObject | DescriptionObject | CommandObject | CodeViewObject | CodeViewTabsObject
+export type ObjectItemsTypes = TitleObject | DescriptionObject | CommandObject | CodeViewObject | CodeViewTabsObject | JsxObject
 export type ObjectMultiItemsTypes = Array<ObjectItemsTypes | ObjectMultiItemsTypes>
 
 
@@ -33,6 +35,8 @@ export const objectToJsx = (source: ObjectItemsTypes) => {
             return codeView(source);
         case ObjectTypes.codeViewTabs:
             return codeViewTabs(source);
+        case ObjectTypes.jsx:
+            return JsxToJsx(source);
 
     }
 }
