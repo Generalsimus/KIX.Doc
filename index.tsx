@@ -10,7 +10,6 @@ import { stringToRoutePath } from "./utils/stringToRoutePath";
 import { HomePage } from "./widgets/versions/v1/pages/home";
 
 
-
 var HTML = <>
     <Header />
     <div class="route-box flex direction-column">
